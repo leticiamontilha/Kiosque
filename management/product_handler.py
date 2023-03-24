@@ -7,13 +7,11 @@ product_list = menu.products
 def get_product_by_id(id: int):
     if type(id) != int:
         raise TypeError("product id must be an int")
-    
-    objeto = {}
-
+    item = {}
     for product in product_list:
         if product["_id"] == id:
-            objeto = product
-    return objeto
+            item = product
+    return item
 
 
 def get_products_by_type(category: str):
